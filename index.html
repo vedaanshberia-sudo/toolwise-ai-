@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8f1">
+  <title>ToolWise AI — Find your perfect tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#">✳ toolwise<span>.ai</span></a>
+    <a class="nav-link" href="#search">Find a tool ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="eyebrow">YOUR INTERNET TOOL-FINDER ✦</span>
+      <h1>Big idea?<br><span>There’s a tool for that.</span></h1>
+      <p>Tell us what you want to do. Discover real websites, explore what they offer, and check whether they’re free or paid.</p>
+    </section>
+
+    <section id="search" class="search-panel">
+      <label for="goal">What do you want to accomplish?</label>
+      <textarea id="goal" rows="3" placeholder="For example: I want to make a website, study for exams, edit videos, research a topic, manage my tasks..."></textarea>
+
+      <div class="fields">
+        <div>
+          <label for="category">Category <small>optional</small></label>
+          <input id="category" list="categories" placeholder="Type any category">
+          <datalist id="categories">
+            <option>AI tools</option><option>Research</option>
+            <option>Website building</option><option>Video editing</option>
+            <option>Graphic design</option><option>Coding</option>
+            <option>Education</option><option>Productivity</option>
+            <option>Writing</option><option>Marketing</option>
+            <option>Audio tools</option><option>Business</option>
+          </datalist>
+        </div>
+        <div>
+          <label for="access">Access preference</label>
+          <select id="access">
+            <option value="any">Show all access types</option>
+            <option value="free">Free or free plan preferred</option>
+            <option value="paid">Include paid tools too</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="searchButton" class="search-button">
+        <span>Find my tools</span><span>↗</span>
+      </button>
+      <p class="privacy-note">Live web search · Access status may need confirmation on the official website.</p>
+    </section>
+
+    <section class="results-area">
+      <div class="results-header">
+        <div>
+          <span class="eyebrow">YOUR SHORTLIST</span>
+          <h2 id="resultsTitle">Your next favourite tool awaits.</h2>
+          <p id="resultsSubtitle">Enter a goal above to search the live web.</p>
+        </div>
+        <span id="liveBadge" class="live-badge">LIVE SEARCH</span>
+      </div>
+
+      <div id="message" class="message hidden" role="status"></div>
+      <div id="results" class="results">
+        <article class="empty-card">
+          <div class="empty-icon">✳</div>
+          <h3>Less scrolling. More doing.</h3>
+          <p>Your results will appear here, with a summary, access type, and official website link.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <a class="brand" href="#">✳ toolwise<span>.ai</span></a>
+      <p>Find your fit. Keep your flow.</p>
+      <p class="footer-note">Access labels are estimates unless explicitly verified.</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
